@@ -29,7 +29,7 @@ const rows = [
 
 function TableUsers() {
     return (
-        <>
+        <div className='mt-6 mb-6'>
             <DataGrid
                 rows={rows}
                 columns={columns}
@@ -39,7 +39,7 @@ function TableUsers() {
                 autoPageSize={true}
                 hideFooterSelectedRowCount={true}
             />
-        </>
+        </div>
     )
 }
 
