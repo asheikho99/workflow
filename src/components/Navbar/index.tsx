@@ -72,15 +72,15 @@ function Navbar() {
                                     {/* Alert/Notification Icon */}
                                     <button
                                         type="button"
-                                        className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                                        className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none"
                                     >
                                         <span className="sr-only">View notifications</span>
                                         <BellIcon className="h-6 w-6" aria-hidden="true" />
                                     </button>
 
                                     {/* Profile dropdown */}
-                                    <Menu as="div" className="ml-3 relative">
-                                        {/* Profile Icon */}
+                                    {/* <Menu as="div" className="ml-3 relative">
+                                        Profile Icon
                                         <div>
                                             <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                                                 <span className="sr-only">Open user menu</span>
@@ -100,9 +100,9 @@ function Navbar() {
                                             leaveFrom="transform opacity-100 scale-100"
                                             leaveTo="transform opacity-0 scale-95"
                                         >
-                                            {/* Profile Icon Dropdown menu */}
+                                            Profile Icon Dropdown menu
                                             <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                                                {/* <Menu.Item>
+                                                <Menu.Item>
                                                     {({ active }) => (
                                                         <a
                                                             href="#"
@@ -121,7 +121,7 @@ function Navbar() {
                                                             Settings
                                                         </a>
                                                     )}
-                                                </Menu.Item> */}
+                                                </Menu.Item>
                                                 <Menu.Item>
                                                     {({ active }) => (
                                                         <a
@@ -134,7 +134,7 @@ function Navbar() {
                                                 </Menu.Item>
                                             </Menu.Items>
                                         </Transition>
-                                    </Menu>
+                                    </Menu> */}
                                 </div>
                             </div>
                         </div>

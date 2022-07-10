@@ -1,14 +1,15 @@
 import * as React from 'react';
 
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridCellParams, GridColumns } from '@mui/x-data-grid';
 import Link from '@mui/material/Link';
 
-const columns = [
+const columns: GridColumns = [
     { field: 'id', headerName: 'ID', flex: 1, hide: true },
     { field: 'firstName', headerName: 'First name', flex: 1 },
     { field: 'lastName', headerName: 'Last name', flex: 1 },
     { field: 'Entry', headerName: 'Entry', type: 'string', flex: 1 },
     { field: 'Leave', headerName: 'Leave', type: 'string', flex: 1 },
+    { field: 'Rating', headerName: 'Rating', type: 'string', flex: 1 },
     {
         field: 'Resume', headerName: 'Resume', type: 'string', sortable: false, flex: 1,
         renderCell: (_params: any) => {
@@ -19,7 +20,6 @@ const columns = [
             )
         }
     },
-    { field: 'Rating', headerName: 'Rating', type: 'number', flex: 1 },
 ];
 
 const rows = [
@@ -31,6 +31,14 @@ function TableUsers() {
     return (
         <div className='mt-6 mb-6'>
             <DataGrid
+                initialState={{
+                    sorting: {
+                        sortModel: [{ field: 'firstName', sort: 'asc' }],
+                    },
+                }}
+                sx={
+                    { textTransform: 'uppercase' }
+                }
                 rows={rows}
                 columns={columns}
                 pageSize={10}
@@ -38,6 +46,7 @@ function TableUsers() {
                 autoHeight={true}
                 autoPageSize={true}
                 hideFooterSelectedRowCount={true}
+                showCellRightBorder={true}
             />
         </div>
     )
