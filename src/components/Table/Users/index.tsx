@@ -37,7 +37,10 @@ function TableUsers() {
                     },
                 }}
                 sx={
-                    { textTransform: 'uppercase' }
+                    {
+                        textTransform: 'uppercase',
+                        backgroundColor: 'white',
+                    }
                 }
                 rows={rows}
                 columns={columns}
